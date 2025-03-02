@@ -13,7 +13,13 @@ function UpdateUser() {
     const [age, setAge] = useState()
     
     const users = useSelector(state => state.users.users)
-    
+    const handleUpdate = (id) => {
+    if (!id) {
+        console.error("User ID is missing!");
+        return;
+    }
+    navigate(`/update/${id}`); // ✅ Pass the correct user ID
+};
     useEffect(()=> {
         const user = users.find(u => u.id === id)
         setName(user.name)
@@ -69,7 +75,9 @@ function UpdateUser() {
               onChange={(e) => setAge(e.target.value)}
             />
           </div>
-          <button className="btn btn-success">Update</button>
+         <button onClick={() => handleUpdate(user.id)} className="btn btn-success">
+    Update
+</button>
         </form>
       </div>
     </div>
