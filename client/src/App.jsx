@@ -15,7 +15,7 @@ function App() {
   useEffect(()=> {
     const fetchData = async() => {
         try {
-            const response = await axios.get('http://127.0.0.1:3001')  // Forces IPv4
+            const response = await axios.get('https://crud07-five.vercel.app/')  // Forces IPv4
 
             dispatch(getUser(response.data));
         } catch(err) {
