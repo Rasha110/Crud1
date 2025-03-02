@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { addUser, updateUser } from "./redux/userSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"; 
 import { useNavigate, useParams } from "react-router-dom";
 
 function UpdateUser() {
