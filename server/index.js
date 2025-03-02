@@ -5,7 +5,7 @@ const UserModel = require('./Models/User')
 
 const app = express()
 app.use(cors({
-    origin:[""],
+    origin:["https://crud1-vfkv.vercel.app/"],
     methods:['GET','POST','PUT','DELETE'],
     allowedHeaders: ['Content-type']
 }))
