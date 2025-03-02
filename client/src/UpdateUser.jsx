@@ -3,7 +3,13 @@ import { useEffect, useState } from "react";
 import { addUser, updateUser } from "./redux/userSlice";
 import { useDispatch, useSelector } from "react-redux"; 
 import { useNavigate, useParams } from "react-router-dom";
+const cors = require('cors');
 
+app.use(cors({
+    origin: " https://crud1-vfkv.vercel.app" // ✅ Allow your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+}));
 function UpdateUser() {
     const {id} = useParams()
    
