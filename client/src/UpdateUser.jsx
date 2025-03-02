@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { addUser, updateUser } from "./redux/userSlice";
 import { useDispatch, useSelector } from "react-redux"; 
 import { useNavigate, useParams } from "react-router-dom";
-const cors = require('cors');
 
-app.use(cors();
+
 function UpdateUser() {
     const {id} = useParams()
    
