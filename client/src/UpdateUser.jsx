@@ -5,11 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 const cors = require('cors');
 
-app.use(cors({
-    origin: " https://crud1-vfkv.vercel.app" // ✅ Allow your frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-}));
+app.use(cors();
 function UpdateUser() {
     const {id} = useParams()
    
